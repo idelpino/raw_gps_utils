@@ -4,7 +4,7 @@
 
 #include "obs_data.h"
 
-ObsData::ObsData(const std::string &_sat_id, const rawgpsutils::ScalarT &_timestamp, rawgpsutils::ScalarT &_pseudorange)
+ObsData::ObsData(const std::string &_sat_id, const TimeStamp &_timestamp, const rawgpsutils::ScalarT &_pseudorange)
         : sat_id_(_sat_id), timestamp_(_timestamp), pseudorange_(_pseudorange)
 {
     //std::cout << "ObsData constructor: " << toString();
@@ -18,7 +18,7 @@ void ObsData::calculateSatPosition()
 std::string ObsData::toString()
 {
     std::ostringstream s;
-    s << "SatID: " << sat_id_ << " -- " << /*timestamp_.get()*/timestamp_ << " -- " << pseudorange_ << " -- (" << sat_position_[0] << ", " << sat_position_[1] << ", " << sat_position_[2];
+    s << "SatID: " << sat_id_ << " -- " << timestamp_.get() << " -- " << pseudorange_ << " -- (" << sat_position_[0] << ", " << sat_position_[1] << ", " << sat_position_[2];
     return s.str();
 }
 
@@ -27,7 +27,7 @@ const std::string &ObsData::getSatId() const
     return sat_id_;
 }
 
-const rawgpsutils::ScalarT &ObsData::getTimestamp() const
+const TimeStamp &ObsData::getTimestamp() const
 {
     return timestamp_;
 }

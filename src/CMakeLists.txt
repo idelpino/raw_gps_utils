@@ -24,14 +24,16 @@ SET(HDRS_BASE
     raw_gps_utils.h)
     
 SET(HDRS
-    obs_data.h
 	nav_data.h
+	obs_data.h
+	time_stamp.h
 )
 
 ## sources
 SET(SRCS
-    obs_data.cpp
 	nav_data.cpp
+	obs_data.cpp
+    time_stamp.cpp
 )
     
 ## create the shared library
