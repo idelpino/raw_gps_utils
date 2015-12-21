@@ -1,5 +1,7 @@
 #include "nav_data.h"
 
+using namespace rawgpsutils;
+
 NavData::NavData(const std::string &_sat_id, const TimeStamp &_timestamp, const rawgpsutils::ScalarT &_pseudorange, const rawgpsutils::ScalarT &_param1, const rawgpsutils::ScalarT &_param2)
         : sat_id_(_sat_id), timestamp_(_timestamp), pseudorange_(_pseudorange), param1_(_param1), param2_(_param2)
 {

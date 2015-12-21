@@ -12,32 +12,35 @@
 // Std includes
 #include <iostream>
 
-class ObsData
+namespace rawgpsutils
 {
-public:
-    ObsData(const std::string &_sat_id, const TimeStamp &_timestamp, const rawgpsutils::ScalarT &_pseudorange);
+    class ObsData
+    {
+    public:
+        ObsData(const std::string &_sat_id, const TimeStamp &_timestamp, const rawgpsutils::ScalarT &_pseudorange);
 
-    void calculateSatPosition();
+        void calculateSatPosition();
 
-    std::string toString();
+        std::string toString();
 
-    const std::string & getSatId() const;
+        const std::string &getSatId() const;
 
-    const TimeStamp & getTimestamp() const;
+        const TimeStamp &getTimestamp() const;
 
-    rawgpsutils::ScalarT getPseudorange() const;
+        rawgpsutils::ScalarT getPseudorange() const;
 
-    Eigen::Vector3s getSatPosition() const;
+        Eigen::Vector3s getSatPosition() const;
 
-    void setSatPosition(const Eigen::Vector3s &sat_position_);
+        void setSatPosition(const Eigen::Vector3s &sat_position_);
 
-protected:
-    std::string sat_id_;
-    TimeStamp timestamp_;
-    rawgpsutils::ScalarT pseudorange_;
-    Eigen::Vector3s sat_position_;
+    protected:
+        std::string sat_id_;
+        TimeStamp timestamp_;
+        rawgpsutils::ScalarT pseudorange_;
+        Eigen::Vector3s sat_position_;
 
-};
+    };
 
+}
 
 #endif //RAW_GPS_UTILS_OBS_DATA_H

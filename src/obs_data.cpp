@@ -4,6 +4,8 @@
 
 #include "obs_data.h"
 
+using namespace rawgpsutils;
+
 ObsData::ObsData(const std::string &_sat_id, const TimeStamp &_timestamp, const rawgpsutils::ScalarT &_pseudorange)
         : sat_id_(_sat_id), timestamp_(_timestamp), pseudorange_(_pseudorange)
 {

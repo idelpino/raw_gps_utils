@@ -12,27 +12,31 @@
 // Std includes
 #include <iostream>
 
-class NavData {
-public:
-    NavData(const std::string &_sat_id, const TimeStamp &_timestamp, const rawgpsutils::ScalarT &_pseudorange, const rawgpsutils::ScalarT &_param1, const rawgpsutils::ScalarT &_param2);
-    
-    const std::string & getSatId() const;
-    
-    const TimeStamp & getTimestamp() const;
-    
-    rawgpsutils::ScalarT getPseudorange() const;
-    
-    rawgpsutils::ScalarT getParam1() const;
-    
-    rawgpsutils::ScalarT getParam2() const;
+namespace rawgpsutils
+{
+    class NavData
+    {
+    public:
+        NavData(const std::string &_sat_id, const TimeStamp &_timestamp, const rawgpsutils::ScalarT &_pseudorange,
+                const rawgpsutils::ScalarT &_param1, const rawgpsutils::ScalarT &_param2);
 
-protected:
-    std::string sat_id_;
-    TimeStamp timestamp_;
-    rawgpsutils::ScalarT pseudorange_;
-    rawgpsutils::ScalarT param1_;
-    rawgpsutils::ScalarT param2_;
-};
+        const std::string &getSatId() const;
 
+        const TimeStamp &getTimestamp() const;
+
+        rawgpsutils::ScalarT getPseudorange() const;
+
+        rawgpsutils::ScalarT getParam1() const;
+
+        rawgpsutils::ScalarT getParam2() const;
+
+    protected:
+        std::string sat_id_;
+        TimeStamp timestamp_;
+        rawgpsutils::ScalarT pseudorange_;
+        rawgpsutils::ScalarT param1_;
+        rawgpsutils::ScalarT param2_;
+    };
+}
 
 #endif //RAW_GPS_UTILS_NAVDATA_H
