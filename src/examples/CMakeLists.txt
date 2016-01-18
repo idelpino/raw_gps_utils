@@ -5,6 +5,6 @@
 #ENDIF(faramotics_FOUND)
 
 ## test
-ADD_EXECUTABLE(test test.cpp)
-TARGET_LINK_LIBRARIES(test ${PROJECT_NAME})
+ADD_EXECUTABLE(test_data test_data.cpp)
+TARGET_LINK_LIBRARIES(test_data ${PROJECT_NAME})
 
