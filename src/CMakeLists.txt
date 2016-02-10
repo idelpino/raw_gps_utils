@@ -24,15 +24,13 @@ SET(HDRS_BASE
     raw_gps_utils.h)
     
 SET(HDRS
-	nav_data.h
-	obs_data.h
+	satellites_obs.h
 	time_stamp.h
 )
 
 ## sources
 SET(SRCS
-	nav_data.cpp
-	obs_data.cpp
+	satellites_obs.cpp
     time_stamp.cpp
 )
     
