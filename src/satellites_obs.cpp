@@ -25,9 +25,9 @@ std::string SatellitesObs::toString()
 }
 
 PrMeasurement::PrMeasurement(int _sat_id,
-                             ScalarT _pseudorange,
-                             const Eigen::Vector3s &_sat_position,
-                             const Eigen::Vector3s &_sat_velocity)
+                             double _pseudorange,
+                             const Eigen::Vector3d &_sat_position,
+                             const Eigen::Vector3d &_sat_velocity)
         : sat_id_(_sat_id),
           pseudorange_(_pseudorange),
           sat_position_(_sat_position),
@@ -37,9 +37,9 @@ PrMeasurement::PrMeasurement(int _sat_id,
 }
 
 PrMeasurement::PrMeasurement(int _sat_id,
-                             ScalarT _pseudorange,
-                             ScalarT _x, ScalarT _y, ScalarT _z,
-                             ScalarT _v_x, ScalarT _v_y, ScalarT _v_z)
+                             double _pseudorange,
+                             double _x, double _y, double _z,
+                             double _v_x, double _v_y, double _v_z)
         : sat_id_(_sat_id),
           pseudorange_(_pseudorange)
 {

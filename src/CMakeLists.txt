@@ -15,23 +15,15 @@ INCLUDE_DIRECTORIES(.)
 IF(Ceres_FOUND)
     INCLUDE_DIRECTORIES(${CERES_INCLUDE_DIRS})
 ENDIF(Ceres_FOUND)
-#IF(faramotics_FOUND)
-#    INCLUDE_DIRECTORIES(${faramotics_INCLUDE_DIRS})
-#ENDIF(faramotics_FOUND)
 
 ## headers
-SET(HDRS_BASE
-    raw_gps_utils.h)
-    
 SET(HDRS
 	satellites_obs.h
-	time_stamp.h
 )
 
 ## sources
 SET(SRCS
 	satellites_obs.cpp
-    time_stamp.cpp
 )
     
 ## create the shared library
