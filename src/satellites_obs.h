@@ -8,6 +8,7 @@
 
 // Std includes
 #include <iostream>
+#include <iomanip>
 #include <eigen3/Eigen/Geometry>
 
 namespace rawgpsutils
@@ -44,7 +45,9 @@ namespace rawgpsutils
     class SatellitesObs
     {
     public:
+        SatellitesObs();
         void addPrMeasurement(PrMeasurement m);
+
     public:
 //        TODO fare un getter per il tempo
 //        e che trasformi da tempo gps a tempo nel loro formato

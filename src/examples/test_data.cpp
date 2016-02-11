@@ -13,6 +13,9 @@ int main(int argc, char** argv)
     obs.time_gps_wnc_ = 3;
     obs.time_gps_tow_ = 4;
 
+    obs.time_ros_sec_ = 356;
+    obs.time_ros_nsec_ = 24546544;
+
     rawgpsutils::PrMeasurement m(5,50, 500, 500, 500, 150, 150, 150);
     obs.measurements_.push_back(m);
 

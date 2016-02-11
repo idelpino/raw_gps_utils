@@ -7,10 +7,25 @@
 using namespace rawgpsutils;
 
 
+SatellitesObs::SatellitesObs()
+{
+    time_ros_sec_ = 0;
+    time_ros_nsec_ = 0;
+    time_gps_wnc_ = 0;
+    time_gps_tow_ = 0;
+}
+
+void SatellitesObs::addPrMeasurement(PrMeasurement m)
+{
+    measurements_.push_back(m);
+}
+
+
 std::string SatellitesObs::toString()
 {
     std::ostringstream s;
-    s << "Obs: " << measurements_.size() << " sats at time TODO:\n";
+	s << std::setprecision(12);
+    s << "Obs: " << measurements_.size() << " sats at ros time " << time_ros_sec_ + time_ros_nsec_/1e9 << ":\n";
 
 
     for (int i = 0; i < measurements_.size(); ++i)
@@ -52,8 +67,3 @@ PrMeasurement::PrMeasurement(int _sat_id,
     sat_velocity_[2] = _v_z;
 }
 
-
-void SatellitesObs::addPrMeasurement(PrMeasurement m)
-{
-    measurements_.push_back(m);
-}
