@@ -8,3 +8,6 @@
 ADD_EXECUTABLE(test_data test_data.cpp)
 TARGET_LINK_LIBRARIES(test_data ${PROJECT_NAME})
 
+ADD_EXECUTABLE(test_ecef2lla test_ecef2lla.cpp)
+TARGET_LINK_LIBRARIES(test_ecef2lla ${PROJECT_NAME})
+
