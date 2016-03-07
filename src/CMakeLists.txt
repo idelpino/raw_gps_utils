@@ -36,8 +36,6 @@ INSTALL(TARGETS ${PROJECT_NAME}
       ARCHIVE DESTINATION lib/iri-algorithms)
         
 ## install headers         
-INSTALL(FILES ${HDRS_BASE} 
-      DESTINATION include/iri-algorithms/raw_gps_utils)
 INSTALL(FILES ${HDRS} 
       DESTINATION include/iri-algorithms/raw_gps_utils)
 

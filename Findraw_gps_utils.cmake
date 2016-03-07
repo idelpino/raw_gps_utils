@@ -1,7 +1,7 @@
 #edit the following line to add the librarie's header files
 FIND_PATH(
     raw_gps_utils_INCLUDE_DIRS
-    NAMES raw_gps_utils.h
+    NAMES satellites_obs.h
     PATHS /usr/local/include/iri-algorithms/raw_gps_utils)
 #change INCLUDE_DIRS to its parent directory
 get_filename_component(raw_gps_utils_INCLUDE_DIRS ${raw_gps_utils_INCLUDE_DIRS} DIRECTORY)
