@@ -14,3 +14,6 @@ TARGET_LINK_LIBRARIES(test_ecef2lla ${PROJECT_NAME})
 ADD_EXECUTABLE(test_transform test_transform.cpp)
 TARGET_LINK_LIBRARIES(test_transform ${PROJECT_NAME})
 
+ADD_EXECUTABLE(test_new_transformation test_new_transformation.cpp)
+TARGET_LINK_LIBRARIES(test_new_transformation ${PROJECT_NAME})
+
