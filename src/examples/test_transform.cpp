@@ -16,7 +16,7 @@ using namespace std;
 int main(int argc, char** argv)
 {
     cout << setprecision(12);
-    bool checkOnlyTheFirstTransform = true;
+    bool checkOnlyTheFirstTransform = false;
 
     Eigen::Matrix<double, 3, 1> vehicle_p_map(0, 0, 0);//thrird coords always 0! we are in 2D
     double vehicle_o = 90*M_PI/180;
