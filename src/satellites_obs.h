@@ -9,6 +9,7 @@
 // Std includes
 #include <iostream>
 #include <iomanip>
+#include <vector>
 #include <eigen3/Eigen/Geometry>
 
 namespace rawgpsutils
